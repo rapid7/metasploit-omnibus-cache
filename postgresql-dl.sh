@@ -7,15 +7,15 @@ else
 fi
 sha256sum postgresql-$version.tar.bz2
 
-if [ ! -f postgresql-$version-1-windows-binaries.zip ]; then
-	curl -O http://get.enterprisedb.com/postgresql/postgresql-$version-1-windows-binaries.zip
+if [ ! -f postgresql-$version-1-windows-x64-binaries.zip ]; then
+	curl -O http://get.enterprisedb.com/postgresql/postgresql-$version-1-windows-x64-binaries.zip
 	rm -fr pgsql
-	unzip postgresql-$version-1-windows-binaries.zip
+	unzip postgresql-$version-1-windows-x64-binaries.zip
 	rm -fr pgsql/doc pgsql/pgAdmin\ 4 pgsql/StackBuilder pgsql/symbols
-	rm postgresql-$version-1-windows-binaries.zip
-	zip -r postgresql-$version-1-windows-binaries.zip pgsql
+	rm postgresql-$version-1-windows-x64-binaries.zip
+	zip -r postgresql-$version-1-windows-x64-binaries.zip pgsql
 	rm -fr pgsql
 else
-	echo postgresql-$version-1-windows-binaries.zip exists
+	echo postgresql-$version-1-windows-x64-binaries.zip exists
 fi
-sha256sum postgresql-$version-1-windows-binaries.zip
+sha256sum postgresql-$version-1-windows-x64-binaries.zip
