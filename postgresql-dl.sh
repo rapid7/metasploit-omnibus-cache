@@ -1,5 +1,5 @@
 #!/bin/sh
-version=9.6.20
+version=13.6
 if [ ! -f postgresql-$version.tar.bz2 ]; then
   curl -O https://ftp.postgresql.org/pub/source/v$version/postgresql-$version.tar.bz2
 else
