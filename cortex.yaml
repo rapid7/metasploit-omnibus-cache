@@ -1,0 +1,14 @@
+---
+info:
+  title: Metasploit Omnibus Cache
+  x-cortex-git:
+    github:
+      alias: r7org
+      repository: rapid7/metasploit-omnibus-cache
+  x-cortex-tag: metasploit-omnibus-cache
+  x-cortex-type: service
+  x-cortex-domain-parents:
+  - tag: metasploit
+openapi: 3.0.1
+servers:
+- url: "/"
